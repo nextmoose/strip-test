@@ -11,25 +11,9 @@
             system :
               {
                 lib =
-                  let
-                    check =
-                      implementation : test :
-                        let
-                          mock =
-                            contents :
-                              {
-                                lib =
-                                  {
-                                    "${ system }" = contents ;
-                                  } ;
-                              } ;
-                          in implementation ( mock null ) ( mock test ) ;
-                    lambda = tester : tester ( implementation : true ) true true ;
-                    pkgs = builtins.getAttr system nixpkgs.legacyPackages ;
-                    in
-                      {
-                        lambda = lambda ;
-                      } ;
+		  {
+		    happy = fun : ( implementation : implementation "HAPPY" ) true "HAPPY" ;
+		  } ;
               }
           ) ;
   }
