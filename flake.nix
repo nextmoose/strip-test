@@ -12,7 +12,7 @@
               {
                 lib =
 		  {
-		    happy = fun : ( implementation : implementation "HAPPY" ) true "HAPPY" ;
+		    happy = tester : tester ( implementation : implementation "HAPPY" ) true "HAPPY" ;
 		  } ;
               }
           ) ;
